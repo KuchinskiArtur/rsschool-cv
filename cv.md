@@ -1,6 +1,6 @@
 # Artur Kuchinski
 
-![Avatar](_cHhWYQI2VM.jpg)
+![Avatar](./cHhWYQI2VM.jpg)
 
 ## **Contacts**
 
