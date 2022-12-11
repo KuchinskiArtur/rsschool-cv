@@ -23,7 +23,7 @@ I dream to travel a lot._
 
 - HTML
 
-- CSS
+- CSS / SCSS
 
 - JavaScript
 
