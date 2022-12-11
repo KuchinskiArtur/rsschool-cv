@@ -1,5 +1,7 @@
 # Artur Kuchinski
 
+![Avatar](_cHhWYQI2VM.jpg)
+
 ## **Contacts**
 
 **Location**: Minsk, Belarus
