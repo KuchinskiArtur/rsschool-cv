@@ -127,32 +127,46 @@
           <h2>code example</h2>
           <div class="example">
             <div class="example__update">
-              <p>updateTodo(id, newTodo) {</p>
-              <p>this.list = this.list.map(todo => {</p>
-              <p>if (todo === id) {</p>
-              <p>return {...todo, ...newtodo }</p>
-              <p>}</p>
-              <p>return todo</p>
-              <p>})</p>
-              <p>return this.list</p>
-              <p>},</p>
-            </div>
-            <div class="example__delete">
-              <p>deleteTodo(id) {</p>
-              <p>
-                const deleteId = this.list.filter(person => person.id !== id)
-              </p>
-              <p>return deleteId</p>
-              <p>},</p>
-            </div>
-            <div class="example__sort">
-              <p>sortByTitle() {</p>
-              <p>
-                const sortTitle = this.list.sort((a, b) => (a.title > b.title ?
-                -1 : 1))
-              </p>
-              <p>return sortTitle</p>
-              <p>},</p>
+           <pre> 
+            function get_pending_uninstalls(customer_id, table_name, callback)
+            {
+                var pendingUninstalls = {};
+                var nextBatch = function(lek) {
+                    var params = {  TableName: table_name,
+                                    ExclusiveStartKey: lek,
+                                    KeyConditionExpression: "#CI = :ci",
+                                    ExpressionAttributeNames:{
+                                        "#CI": "customer_id"
+                                    },
+                                    ExpressionAttributeValues: {
+                                        ":ci": {"S": customer_id},
+                                    }};
+                    a1_dynamodb.query(params, function(err, data) {
+                        if (err)
+                        {
+                            console.log(err, err.stack);
+                            err.message = "ERROR: " + err.message;
+                            callback(err);
+                            return;
+                        }
+                        for (var item in data.Items)
+                        {
+                            if ( data.Items[item].hasOwnProperty("id") )
+                            {
+                                pendingUninstalls[data.Items[item].id["S"]] = 1;
+                            }
+                        }
+                        if (data.LastEvaluatedKey)
+                        {
+                            nextBatch(data.LastEvaluatedKey);
+                        } else
+                        {
+                            callback(null, pendingUninstalls);
+                        }
+                    });
+                };
+                nextBatch();
+            }</pre>
             </div>
           </div>
         </div>
