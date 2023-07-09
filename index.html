@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
     <header class="header">
-      <div class="header__info">
-        <nav class="header__list"><a href="#about__first">about me</a></nav>
-        <nav class="header__list"><a href="#about-1">languages</a></nav>
-        <nav class="header__list"><a href="#about-2">skills</a></nav>
-        <nav class="header__list"><a href="#about-3">education</a></nav>
-        <nav class="header__list"><a href="#about-4">code</a></nav>
-        <nav class="header__list"><a href="#about-5">projects</a></nav>
-        <nav class="header__list"><a href="#about-6">contacts</a></nav>
-      </div>
+      <nav class="header__info">
+        <ul>
+        <li class="header__list"><a href="#about__first">about me</a></li>
+        <li class="header__list"><a href="#about-1">languages</a></li>
+        <li class="header__list"><a href="#about-2">skills</a></li>
+        <li class="header__list"><a href="#about-3">education</a></li>
+        <li class="header__list"><a href="#about-4">code</a></li>
+        <li class="header__list"><a href="#about-5">projects</a></li>
+        <li class="header__list"><a href="#about-6">contacts</a></li>
+      </ul>
+      </nav>
     </header>
 
     <div class="main">
       <div class="my__info">
         <address id="about"></address>
         <div class="my__avatar">
-          <img class="avatar" src="./Image/avatar.jpg " alt="не работает " />
+          <img class="avatar" src="./Image/avatar.jpg " alt="не работает">
         </div>
 
         <div class="about__me">
@@ -55,105 +57,119 @@
             <img
               class="my__skills"
               src="./Image/html.png "
-              alt="не работает "
-            />Html
+              alt="не работает ">Html
           </p>
           <p>
             <img
               class="my__skills"
               src="./Image/css.svg "
               alt="не работает "
-            />Css
+            >Css
           </p>
           <p>
             <img
               class="my__skills"
               src="./Image/js.svg "
               alt="не работает "
-            />JavaScript
+            >JavaScript
           </p>
           <p>
             <img
               class="my__skills"
               src="./Image/react.svg "
               alt="не работает "
-            />React
+            >React
           </p>
           <p>
             <img
               class="my__skills"
               src="./Image/figma.svg "
               alt="не работает "
-            />Figma
+            >Figma
           </p>
           <p>
             <img
               class="my__skills"
               src="./Image/teamwork.png "
               alt="не работает "
-            />Teamwork
+            >Teamwork
           </p>
         </div>
+        <div class="education">
+          <address id="about-3"></address>
+          <div class="education__info">
+            <h2>education</h2>
+            <ul class="list__education">
+              <li class="education__list">
+                <a href="https://teachmeskills.by ">
+                  <img
+                    class="contact__image"
+                    src="./Image/teachme.svg "
+                    alt="не работает "
+                  >
+                  Programming courses Teach Me Skills
+                </a>
+              </li>
+  
+              <li class="education__list">
+                <a href="https://rs.school/js/ ">
+                  <img
+                    class="contact__image"
+                    src="./Image/rs_school.svg "
+                    alt="не работает "
+                  >
+                  Cours «JavaScript/Front-end»
+                </a>
+              </li>
+            </ul>
+          </div>
       </div>
-      <div class="education">
-        <address id="about-3"></address>
-        <div class="education__info">
-          <h2>education</h2>
-          <ul class="list__education">
-            <li class="education__list">
-              <a href="https://teachmeskills.by ">
-                <img
-                  class="contact__image"
-                  src="./Image/teachme.svg "
-                  alt="не работает "
-                />
-                Programming courses Teach Me Skills
-              </a>
-            </li>
-
-            <li class="education__list">
-              <a href="https://rs.school/js/ ">
-                <img
-                  class="contact__image"
-                  src="./Image/rs_school.svg "
-                  alt="не работает "
-                />
-                Cours «JavaScript/Front-end»
-              </a>
-            </li>
-          </ul>
-        </div>
+     
         <div class="code__example">
           <address id="about-4"></address>
           <h2>code example</h2>
           <div class="example">
             <div class="example__update">
-              <p>updateTodo(id, newTodo) {</p>
-              <p>this.list = this.list.map(todo => {</p>
-              <p>if (todo === id) {</p>
-              <p>return {...todo, ...newtodo }</p>
-              <p>}</p>
-              <p>return todo</p>
-              <p>})</p>
-              <p>return this.list</p>
-              <p>},</p>
-            </div>
-            <div class="example__delete">
-              <p>deleteTodo(id) {</p>
-              <p>
-                const deleteId = this.list.filter(person => person.id !== id)
-              </p>
-              <p>return deleteId</p>
-              <p>},</p>
-            </div>
-            <div class="example__sort">
-              <p>sortByTitle() {</p>
-              <p>
-                const sortTitle = this.list.sort((a, b) => (a.title > b.title ?
-                -1 : 1))
-              </p>
-              <p>return sortTitle</p>
-              <p>},</p>
+           <pre> 
+            function get_pending_uninstalls(customer_id, table_name, callback)
+            {
+                var pendingUninstalls = {};
+                var nextBatch = function(lek) {
+                    var params = {  TableName: table_name,
+                                    ExclusiveStartKey: lek,
+                                    KeyConditionExpression: "#CI = :ci",
+                                    ExpressionAttributeNames:{
+                                        "#CI": "customer_id"
+                                    },
+                                    ExpressionAttributeValues: {
+                                        ":ci": {"S": customer_id},
+                                    }};
+                    a1_dynamodb.query(params, function(err, data) {
+                        if (err)
+                        {
+                            console.log(err, err.stack);
+                            err.message = "ERROR: " + err.message;
+                            callback(err);
+                            return;
+                        }
+                        for (var item in data.Items)
+                        {
+                            if ( data.Items[item].hasOwnProperty("id") )
+                            {
+                                pendingUninstalls[data.Items[item].id["S"]] = 1;
+                            }
+                        }
+                        if (data.LastEvaluatedKey)
+                        {
+                            nextBatch(data.LastEvaluatedKey);
+                        } else
+                        {
+                            callback(null, pendingUninstalls);
+                        }
+                    });
+                };
+                nextBatch();
+            }</pre>
             </div>
           </div>
         </div>
@@ -168,7 +184,7 @@
           class="projects_pixema"
           src="./Image/project_pixema.png "
           alt="не работает "
-        />
+        >
       </div>
     </div>
     <div class="footer">
@@ -181,19 +197,19 @@
             class="contact__image"
             src="./Image/telegram.svg "
             alt="не работает "
-          />
+          >
           <img
             class="contact__image"
             src="./Image/viber.svg "
             alt="не работает "
-          />
+          >
           <img
             class="contact__image"
             src="./Image/phone.png "
             alt="не работает "
-          />
+          >
         </p>
-        <p>Adress: Minsk, Belarus 2022</p>
+        <p>Adress: Minsk, Belarus 2023</p>
       </div>
       <div class="my__contacts__list">
         <ul class="list__contact">
@@ -203,7 +219,7 @@
                 class="contact__image"
                 src="./Image/facebook.svg "
                 alt="не работает "
-              />
+              >
             </a>
           </li>
 
@@ -213,7 +229,7 @@
                 class="contact__image"
                 src="./Image/github.svg "
                 alt="не работает "
-              />
+              >
             </a>
           </li>
 
@@ -223,7 +239,7 @@
                 class="contact__image"
                 src="./Image/vk.svg "
                 alt="не работает "
-              />
+              >
             </a>
           </li>
 
@@ -235,7 +251,7 @@
                 class="contact__image"
                 src="./Image/mail.svg "
                 alt="не работает "
-              />
+              >
             </a>
           </li>
 
@@ -245,7 +261,7 @@
                 class="contact__image"
                 src="./Image/rs_school.svg "
                 alt="не работает "
-              />
+              >
             </a>
           </li>
         </ul>
